@@ -1,0 +1,145 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Dark mode */
+  body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  /* Container */
+  .app-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  
+    /* Centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Dark mode container */
+  body.dark .app-container {
+    background: #1e1e1e;
+    box-shadow: none; /* Removes glow */
+    border: 1px solid #2a2a2a; /* Subtle border */
+  }
+  
+  /* Timer container */
+  .timer-container {
+    text-align: center;
+    border: 2px solid #333;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 320px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #aaa;
+    margin-bottom: 1rem;
+  }
+  
+  /* Timer display */
+  .timer-display {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+    letter-spacing: 0.1em;
+  }
+  
+  /* Mode buttons & controls */
+  .mode-buttons button,
+  .control-buttons button,
+  .dark-mode-toggle {
+    margin: 0.3rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: 2px solid #333;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Button hover & active */
+  .mode-buttons button.active,
+  .mode-buttons button:hover,
+  .control-buttons button:hover,
+  .dark-mode-toggle:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Session info */
+  .session-info {
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  /* Original button override */
+  button {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 0.6rem 1.2rem;
+    margin: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* ✅ Dark mode button overrides (clean, no glow) */
+  body.dark button {
+    border-color: #555;
+    color: #ccc;
+    background-color: transparent;
+  }
+  
+  body.dark .mode-buttons button.active,
+  body.dark .mode-buttons button:hover,
+  body.dark .control-buttons button:hover,
+  body.dark .dark-mode-toggle:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .app-container {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  
+    .timer-display {
+      font-size: 3rem;
+    }
+  
+    button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+  }
+  
